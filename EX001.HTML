@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+        /* ESSE CÓDIGO ABAIXO ELE E DE TIPO "GLOBAL" E ESTOU DEIXANDO TODO O AMBIENTE DO SITE DESSA MANEIRA ABAIXO: */
+        * {
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif; /*fontes*/
+            margin: 0; /*Margem do site*/
+            padding: 0; 
+            box-sizing: border-box;
+        }
+
+
+        /* ESTILO DA CORPO DO SITE, COMO O FUNDO CENTRALIZAÇÃO ENTRE OUTRAS COISAS*/
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            height: 100vh;
+            background-image: linear-gradient(to top, #6929f3, #4804D9, #2E038C);
+        }
+        /* BOTÃO DO SITE */
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #2E038C;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* BOTÃO DE AÇÃO */
+        button:hover {
+            background-color: #1f025d;
+        }
+
+    </style>
+
+</head>
+<body>
+    <button>Hello World</button>
+    
+    <script>
+        window.alert('Vai tomar no cu porra') // Vai notificar uma mensagem
+        window.confirm('Está gostando de JS?') //Janela ok e cancela
+        window.prompt('Qual é o seu nome?') //Vai perguntar
+
+
+    </script>
+</body>
+</html>
