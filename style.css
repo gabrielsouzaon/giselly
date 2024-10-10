@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #673ab7; /* Lilás escuro */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.button {
+    background-color: #d1c4e9; /* Lilás claro */
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #9575cd; /* Lilás mais escuro */
+}
+
+.hidden {
+    display: none; /* Esconde o elemento */
+}
+
+.moving-button {
+    background-color: #d1c4e9; /* Lilás claro */
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.moving-button:hover {
+    background-color: #9575cd; /* Lilás mais escuro */
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #ffffff; /* Branco */
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .button, .moving-button {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    .message {
+        font-size: 16px;
+    }
+}

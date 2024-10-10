@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giselly</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button id="gisellybutton" class="button">Giselly</button>
+        <button id="movingbutton" class="moving-button hidden">Você é linda</button>
+        <div id="message" class="hidden">
+            <p class="message">Realmente linda! </p>
+        </div>
+    </div>
+    
+    <script>
+        const button = document.getElementById('gisellybutton');
+        const movingButton = document.getElementById('movingbutton');
+        const message = document.getElementById('message');
+
+        button.addEventListener('click', () => {
+            button.classList.add('hidden'); // Esconde o botão "Giselly"
+            movingButton.classList.remove('hidden'); // Mostra o botão que se move
+            moveButton(); // Inicia a animação do botão
+        });
+
+        movingButton.addEventListener('click', () => {
+            message.classList.remove('hidden'); // Mostra a mensagem ao clicar no botão que se move
+        });
+
+        function moveButton() {
+            let direction = 1;
+            let position = 0;
+            const step = 5;
+
+            const interval = setInterval(() => {
+                position += step * direction;
+
+                if (position >= 200 || position <= 0) {
+                    direction *= -1; // Inverte a direção
+                }
+
+                movingButton.style.transform = `translateX(${position}px)`;
+            }, 100);
+
+            // Para parar o movimento se a mensagem aparecer
+            movingButton.addEventListener('click', () => {
+                clearInterval(interval);
+            });
+        }
+    </script>
+
+</body>
+</html>
